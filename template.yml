@@ -5,8 +5,10 @@
   vars:
     ip:
       - 3.142.97.252
+      - 172.22.23.66
     alias:
-      - ec2-3-142-97-252.us-east-2.compute.amazonaws.com  
+      - ec2-3-142-97-252.us-east-2.compute.amazonaws.com 
+      - myexample.com 
   tasks:
     - name: Update /etc/hosts using Jinja2
       template:
