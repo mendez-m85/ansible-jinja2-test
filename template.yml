@@ -8,14 +8,9 @@
         src: ./hosts.j2
         dest: /etc/hosts
    
-    - name: "Example1: Validate if a String or line is present in the file"
-      lineinfile:
-        path: /home/ec2-user/slow_response_times_dashboard.json
-        # The String to Search
-        regexp: "id: 123" 
-        # The String to Replace
-        line: "LogLevel debug"
-        state: present
-        backup: yes
-        
-      # register: {{ example1out    
+    # - name: "Example1: Validate if a String or line is present in the file"
+    #   lineinfile:
+    #     dest: /home/ec2-user/slow_response_times_dashboard.json
+    #     regexp: "^id$"
+    #     state: absent
+    #     backup: yes 
