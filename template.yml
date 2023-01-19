@@ -7,10 +7,3 @@
       template:
         src: ./hosts.j2
         dest: /etc/hosts
-   
-    # - name: "Example1: Validate if a String or line is present in the file"
-    #   lineinfile:
-    #     dest: /home/ec2-user/slow_response_times_dashboard.json
-    #     regexp: "^id$"
-    #     state: absent
-    #     backup: yes 
