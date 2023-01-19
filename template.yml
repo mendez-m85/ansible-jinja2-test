@@ -2,10 +2,20 @@
 - name: Updating /etc/hosts file dynamically 
   hosts: all
   become: yes
-  vars:
-    my_hostname_alias: web1
   tasks:
     - name: Update /etc/hosts using Jinja2
       template:
         src: ./hosts.j2
         dest: /etc/hosts
+   
+    - name: "Example1: Validate if a String or line is present in the file"
+      lineinfile:
+        path: /etc/httpd/conf/httpd.conf
+        # The String to Search
+        regexp: "id: 123" 
+        # The String to Replace
+        line: "LogLevel debug"
+        state: present
+        backup: yes
+        
+        register: example1out    
