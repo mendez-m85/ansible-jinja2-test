@@ -1,0 +1,11 @@
+---
+- name: Updating /etc/hosts file dynamically 
+  hosts: all
+  become: yes
+  vars:
+    my_hostname_alias: web1
+  tasks:
+    - name: Update /etc/hosts using Jinja2
+      template:
+        src: ./hosts.j2
+        dest: /etc/hosts
