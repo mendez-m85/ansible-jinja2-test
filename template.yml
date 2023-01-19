@@ -2,6 +2,13 @@
 - name: Updating /etc/hosts file dynamically 
   hosts: all
   become: yes
+  vars:
+    ip:
+      - 172.22.23.66
+      - 3.142.97.252
+    alias:
+      - aap.com
+      - ec2-3-142-97-252.us-east-2.compute.amazonaws.com  
   tasks:
     - name: Update /etc/hosts using Jinja2
       template:

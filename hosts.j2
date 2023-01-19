@@ -1,3 +1,10 @@
-This host is: {{ ansible_hostname }}
-it's IP address is {{ ansible_all_ipv4_addresses }}
-the OS IS: {{ ansible_os_family }}
+my_hostname = {{ ip }}
+my_hostname_alias = {{ alias }}
+
+{% for ips in ip %}
+my_hostname  {{ ip }};
+{% endfor %}
+
+{% for alias in alias %}
+my_hostname_alias  {{ alias }};
+{% endfor %}
