@@ -10,7 +10,7 @@
    
     - name: "Example1: Validate if a String or line is present in the file"
       lineinfile:
-        path: /etc/httpd/conf/httpd.conf
+        path: /home/ec2-user/slow_response_times_dashboard.json
         # The String to Search
         regexp: "id: 123" 
         # The String to Replace
