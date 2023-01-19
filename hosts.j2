@@ -1,2 +1,2 @@
-172.22.23.66 = {{ my_hostname }}
-myexample.com = {{ my_hostname_alias }} 
+my_hostname_alias={{ ansible_facts['fqdn'] }}
+my_hostname={{ ansible_facts['default_ipv4']['address'] }}
