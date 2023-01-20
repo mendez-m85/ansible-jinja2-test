@@ -18,5 +18,5 @@
     - name: Remove id 123
       lineinfile:
         path: /home/ec2-user/slow_response_times_dashboard.json
-        regexp: '^ id: 123'
+        regexp: '^ "id": "123"'
         state: absent
