@@ -15,9 +15,8 @@
         src: ./hosts.j2
         dest: /etc/hosts
 
-    - name: Ansible insert lineinfile   
-      lineinfile:  
-        path: /home/ec2-user/remote_server.txt  
-        line: Inserting a line in a file.  
-        state: present  
-        create: yes  
+    - name: Remove id 123
+      lineinfile:
+        path: /home/ec2-user/slow_response_times_dashboard.json
+        regexp: "id": "123"
+        state: absent
