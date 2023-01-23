@@ -22,3 +22,6 @@
         regexp: 123\b
         state: absent
         backup: true
+
+    - name: Rename slow_response_times_dashboard.json to slow_response_times_dashboard_no_id.json
+      command: mv /home/ec2-user/slow_response_times_dashboard.json /home/ec2-user/slow_response_times_dashboard_no_id.json
