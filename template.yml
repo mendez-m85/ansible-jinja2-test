@@ -19,6 +19,6 @@
       lineinfile:
         path: /home/ec2-user/slow_response_times_dashboard.json
         mode: 0777
-        regexp: (123)
+        regexp: 123\b
         state: absent
         backup: true
