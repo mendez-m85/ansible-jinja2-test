@@ -18,6 +18,7 @@
     - name: Remove id 123
       lineinfile:
         path: /home/ec2-user/slow_response_times_dashboard.json
+        mode: 0777
         regexp: (123)
         state: absent
         backup: true
