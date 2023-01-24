@@ -4,3 +4,4 @@
     tasks: 
       - name: debug message
         debug:
+          msg: "Example text"
