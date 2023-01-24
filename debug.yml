@@ -1,7 +1,9 @@
 ---
   - name: debug module demo
     hosts: all 
+    vars:
+      fruit: "apple"
     tasks: 
       - name: debug message
         debug:
-          msg: "Example text"
+         var: fruit
