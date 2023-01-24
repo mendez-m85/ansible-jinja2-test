@@ -6,4 +6,4 @@
     tasks: 
       - name: debug message
         debug:
-         var: fruit
+         msg: "Our fruit is {{ fruit }}"
