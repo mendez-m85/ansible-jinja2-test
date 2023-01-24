@@ -1,0 +1,6 @@
+---
+  - name: debug module demo
+    hosts: all 
+    tasks: 
+      - name: debug message
+        debug:
