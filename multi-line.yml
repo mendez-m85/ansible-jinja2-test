@@ -13,7 +13,7 @@
     tasks:
       - name: print variable1
         debug:
-          var: variable1
+          msg: "{{ variable1.split('\n') }}"
 
       - name: print variable2
         debug:
